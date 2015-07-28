@@ -1,2 +1,2 @@
-# re-inventing-wheel
+# wheel
 A MVC in PHP
