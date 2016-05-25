@@ -1,5 +1,7 @@
 <?php
-	$url = $_GET['url'];
-	require 'controller/' . $url . '.php';
-	$init = new Index();
+	$url = isset($_GET['url']) ? $_GET['url'] : null;
+	$url = rtrim($url, '/');
+	$url = explode('/', $url);
+
+	print_r($url);
 ?>
