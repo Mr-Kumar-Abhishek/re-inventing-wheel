@@ -1,4 +1,5 @@
 <?php
 	$url = $_GET['url'];
-	echo $url;
+	require 'controller/' . $url . '.php';
+	$init = new Index();
 ?>
