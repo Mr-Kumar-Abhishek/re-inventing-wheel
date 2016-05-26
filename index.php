@@ -1,7 +1,11 @@
 <?php
-	$url = isset($_GET['url']) ? $_GET['url'] : null;
-	$url = rtrim($url, '/');
-	$url = explode('/', $url);
 
-	print_r($url);
+	// defining our directory path
+	define(BASE_PATH, dirname(realpath(__FILE__)));
+
+	require(BASE_PATH . '/library/Initialize.php');
+	require(BASE_PATH . '/library/Controller.php');
+	require(BASE_PATH . '/library/Views.php');
+	
+	$initialize = new Initialize();
 ?>
