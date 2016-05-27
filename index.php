@@ -3,9 +3,9 @@
 	// defining our directory path
 	define(BASE_PATH, dirname(realpath(__FILE__)));
 
-	require(BASE_PATH . '/library/Initialize.php');
-	require(BASE_PATH . '/library/Controller.php');
-	require(BASE_PATH . '/library/Views.php');
+	function __autoload($class){
+		require_once(BASE_PATH . '/library/' . $class . '.php');
+	}
 	
 	$initialize = new Initialize();
 ?>
